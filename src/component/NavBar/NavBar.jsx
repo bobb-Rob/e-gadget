@@ -12,7 +12,6 @@ const NavBar = () => {
         <header id='NavBar-wrapper' >
             <div>
                 <BiMenu />
-
                 <span id='gadget-logo' >Gadgette</span> 
             </div>
             <div className='search-bar-div' >
@@ -37,9 +36,9 @@ const NavBar = () => {
             </div>
         </header>
         <div className='Nav-link-div' > 
-            <Link to={'./Home/Home'}  >Home</Link>   
-            <Link to={'./Home/Home'} >Products</Link>   
-            <Link to={'./Home/Home'} >Reviews</Link>   
+            <Link className='link' to={'/'}  >Home</Link>   
+            <Link className='link' to={'shop'} >Shop</Link>             
+            <Link className='link' to={'contact'} >Contact</Link>             
         </div>
     </div>
     );

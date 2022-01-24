@@ -17,4 +17,7 @@ html{
 
 .App{
     background: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

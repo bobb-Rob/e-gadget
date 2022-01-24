@@ -7,7 +7,7 @@
 
 .NavBar{
     border-bottom: 1px solid;
-    height: 100px;
+    height: 120px;
     width: 100%;
     background-color: var(--lightBlue);
     color: white;
@@ -26,9 +26,13 @@
     /* border: 2px solid brown; */
     width: 50%;
     position: absolute;
-    bottom: 0px;
+    bottom: 5px;
     font-size: 18px;
     text-decoration: none;
+}
+
+.link{
+    color: white;
 }
 
 #NavBar-wrapper{
