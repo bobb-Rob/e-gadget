@@ -1,34 +1,38 @@
-import React from 'react';
-import { getProducts } from './productsArray';
+
 import ProductCard from './productCard';
-import { NavLink } from 'react-router-dom'
-import './products.css'
+import Checkout from './CkeckoutSlider';
+import Backdrop from './Backdrop';
+import './products.css';
+import {useContext} from 'react';
+import DataContext from '../../DataProvider';
+
 
 const Products = () => {
-    const store = getProducts();
-    console.log(store);
+  const {  allProducts, showCheckout, backdropClickHandler, searchInput  } = useContext(DataContext);
+
+
+  let backdrop;
+  if(showCheckout){
+    backdrop = <Backdrop close={backdropClickHandler} />;
+  }
+
   return (
-    <div className='shop-page' >
-      <aside>
-        <h4>Category</h4>
-        <div>
-          <NavLink to={'mobile'} >Mobile Phones</NavLink>
-          <NavLink to={'laptop'} >Laptop Computers</NavLink>
-          <NavLink to={'camera'} >Cameras</NavLink>
-          <NavLink to={'tv'} >TV</NavLink>
-          <NavLink to={'others'} >Others</NavLink>
+    <div className='shop-page' >     
+      <Checkout show={showCheckout} />
+        {backdrop}
+        <div className='product-container' >              
+              { allProducts.filter(item => { 
+                // console.log(item.itemName)              
+                if(!searchInput) return true;
+                let name = item.itemName.toLowerCase();               
+                return name.startsWith(searchInput.toLowerCase());
+              }).map(item => {
+              return <ProductCard 
+                    products={item} key = {item.id}                     
+                    />
+                })
+              }              
         </div>
-
-
-      </aside>
-        <div className='product-container' >
-              
-              { store.map(item => {
-                return <ProductCard products={item} key={item.id} />
-              })  }
-              
-        </div>
-
     </div>
    
   );

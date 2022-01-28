@@ -5,13 +5,10 @@
 }
 
 
-aside{
-    /* border: 2px solid green; */
-    width: 30%;
-}
 
 .shop-page{
     display: flex;
+    margin-top: 120px;
 }
 
 .product-container{
@@ -49,6 +46,7 @@ aside{
      width: 100%;
      text-align: center;
      margin-bottom: 10px;
+     font-size: 1rem;
 }
 
 .add-to-cart-btn{
@@ -58,4 +56,9 @@ aside{
     color: white;
     border-radius: 20px;
     margin-top: 10px;
+}
+
+.in-cart{
+    background-color: var(--green) !important;
+    color: var(--lightBlue) !important;
 }

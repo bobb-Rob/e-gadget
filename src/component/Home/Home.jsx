@@ -1,26 +1,33 @@
 import React from 'react';
-import {MdArrowForward} from 'react-icons/md'
+import { Link } from 'react-router-dom';
+import {MdArrowForward} from 'react-icons/md';
 import './Home.css'
 
 
 
-const Home = ({hotDeals}) => {
+const Home = () => {
+    
   return (
-        <main>           
+        <main 
+        style={{marginTop: '120px'}}
+        >           
             <h1 className='home-header' >
                 Find all sorts of gadgets you'll love. Support independent sellers. <br /> Only on Gadgette.
             </h1>
-            <button className='see-product-btn' >
-                <div>More products</div> 
-                <MdArrowForward className='forward-btn' />
-            </button>
-             <div className='image-background' >
+            <Link to={'shop'} >
+                <button className='see-product-btn'>
+                    <div>All products</div> 
+                    <MdArrowForward className='forward-btn' />
+                </button>
+            </Link>
+            
+             {/* <div className='image-background' >
                 <div className='hot-deal-section' >
-                {hotDeals}
+                {'man'
+                }
                 
                 </div>             
-             </div>
-           
+             </div>            */}
         </main>
     );
 };

@@ -11,8 +11,13 @@
     transition: all .2s linear;
 }
 
+body{
+    height: 100%;
+}
+
 html{
     font-size: 72.5%;
+    /* height: 100%; */
 }
 
 .App{

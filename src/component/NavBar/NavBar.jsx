@@ -1,39 +1,37 @@
-import React from 'react';
+import {useContext} from 'react';
+import DataContext from '../../DataProvider';
 import './NavBar.css';
-import { Link } from 'react-router-dom'
-import { FaSearch, FaShoppingCart } from 'react-icons/fa'
-import { MdOutlineArrowForward } from 'react-icons/md'
-import { BiMenu } from 'react-icons/bi'
+import { Link } from 'react-router-dom';
+import { FaSearch } from 'react-icons/fa';
+// import { BiMenu } from 'react-icons/bi';
+import CartDisplay from './CartDisplay';
+
 
 const NavBar = () => {
+    const { searchInput, setInput } = useContext(DataContext);
+       
 
   return (
     <div className='NavBar' >        
         <header id='NavBar-wrapper' >
-            <div>
-                <BiMenu />
+            <div>              
                 <span id='gadget-logo' >Gadgette</span> 
             </div>
             <div className='search-bar-div' >
-                <input type="search" placeholder='Search for any Gadget' />
+                <input type="search" 
+                value={searchInput}
+                onChange={(e) => {
+                    let search = e.target.value;
+                    if(search){
+                        setInput(search)
+                    }else{
+                        setInput('')
+                    }
+                }}
+                placeholder='Search for any Gadget' />
                 <button><FaSearch className='search-icon'  /></button>
             </div>
-            <div className='shoppingCart-div' >
-                <div>
-                    <button className='round-icon-button' >
-                        <span>98</span>
-                        <FaShoppingCart className='cart' />
-                    </button>
-                    <p>$34.90</p>
-                    <p className='ckeckout-display-btn' >Checkout</p>
-                </div>
-                <div className='checkout-div' >
-                    <button  className='round-icon-button'  >
-                        <MdOutlineArrowForward className='checkout' />
-                    </button>
-                    <p>Checkout</p>
-                </div>           
-            </div>
+            <CartDisplay />
         </header>
         <div className='Nav-link-div' > 
             <Link className='link' to={'/'}  >Home</Link>   
