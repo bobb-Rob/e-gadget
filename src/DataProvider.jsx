@@ -86,10 +86,8 @@ export const DataProvider = ({children}) => {
   }
 
 
-
-
   return (
-    <DataContext.Provider value={{
+    <DataContext.Provider value = {{
       cartTotalSum, showCheckout, checkoutToggleClickFn,
       allProducts, addToCart, cart, removeFromCart, changeQty, cartCount,
       backdropClickHandler, searchInput, setInput
