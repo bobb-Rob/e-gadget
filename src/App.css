@@ -5,9 +5,7 @@
     margin: 0; padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    border: none; 
-    /* outline: blue solid 1px ; */
-    /* text-transform: capitalize; */
+    border: none;
     transition: all .2s linear;
 }
 
@@ -17,7 +15,6 @@ body{
 
 html{
     font-size: 72.5%;
-    /* height: 100%; */
 }
 
 .App{

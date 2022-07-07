@@ -1,18 +1,13 @@
-// import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Products from './component/Product/Products';
 import Home from './component/Home/Home';
 import NavBar from "./component/NavBar/NavBar";
 import Contact from './component/Contact/Contact';
 import { DataProvider } from './DataProvider';
-// import DataContext from './DataProvider';
 
-import './App.css'
+import './App.css';
 
-
-function App(props) {
-  // const [products, setProducts] = useState(0)
-
+function App() {  
   return (
     <div className="App">
       <DataProvider>             
