@@ -36,9 +36,9 @@ To get a local copy up and running follow these simple example steps.
 Clone the repository and change the directory to portfolio
 
 ``` 
-  `$ git clone https://github.com/bobb-Rob/react-todo-app.git`
+  `$ git clone https://github.com/bobb-Rob/e-gadget.git`
 
-  `$ cd react-todo-app`
+  `$ cd e-gadget`
 
 ```
 
@@ -76,8 +76,7 @@ Contributions, issues, and feature requests are welcome!
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-
-- Hat tip to Microverse team for inspiring this project.
+My special appreciation to [Srb Khachatryan](https://www.behance.net/gallery/107062379/MG-Store-Website-Design) whose design I drew alot of ideas from.
 
 ## 📝 License
 
